@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="container">
-
       <div className="container-form">
 
         <form>
@@ -56,20 +55,23 @@ function App() {
               />
             </div>
 
+            <div className="credit-card">
+              <Cards 
+                number={number}
+                name={name}
+                expiry={expiry}
+                cvc={cvc}
+                focused={focus}
+              />
+           </div>
+
           </div>
         </form>
 
-        <Cards 
-          number={number}
-          name={name}
-          expiry={expiry}
-          cvc={cvc}
-          focused={focus}
-        />
+
 
       </div>
 
-      
     </div>
   );
 }
