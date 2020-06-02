@@ -5,7 +5,6 @@
 }
 
 .container .container-form {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,9 @@
 }
 
 .container .container-form form {
+  width: 100%;
+  max-width: 768px;
+  background-color: #282c34;  
   box-shadow: 0 0 30px rgba(0, 0, 0, 1);
   border-radius: 8px;
   padding: 15px;
@@ -28,6 +30,10 @@
 
 .container .container-form form .input-form .input-group {
   display: flex;
+}
+
+.container .container-form form .input-form .input-group input {
+  width: 100%;
 }
 
 .input-form {
@@ -79,4 +85,27 @@ input, button, textarea {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .container .container-form form {
+    border-radius: 0px;
+  } 
+}
 
+@media screen and (max-width: 360px) {
+  .rccs {
+      width: auto;
+  }
+
+  .rccs__card {
+      width: 250px;
+  }
+
+  .container .container-form form .input-form .input-group {
+      flex-direction: column;
+  }
+
+  .container .container-form form .input-form .input-group input {
+      width: auto;
+  }
+
+}
